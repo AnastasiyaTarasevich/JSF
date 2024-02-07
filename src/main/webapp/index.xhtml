@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+    <title>JSF</title>
+</h:head>
+
+<h:body>
+    <h:form id="myForm">
+        <h:outputLabel for="name" value="Name:" />
+        <h:inputText id="name" value="#{myBean.name}" required="true" />
+
+
+        <h:outputLabel for="surname" value="Surname:" />
+        <h:inputText id="surname" value="#{myBean.surname}" required="true" />
+
+
+        <h:commandButton value="Submit" action="#{myBean.click}" />
+
+        <rich:messages globalOnly="true" />
+    </h:form>
+
+    <h:outputStylesheet library="org.richfaces" name="skinning.ecss" target="head" />
+</h:body>
+
+</html>
